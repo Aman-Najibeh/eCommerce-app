@@ -1,6 +1,6 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-
+import {useUserStore} from '@/store/User'
 const routes = [
   {
     path: '/',
@@ -15,11 +15,100 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ '@/views/HomeView.vue'),
       },
       {
-        path:'/about',
-        component:()=>import('@/views/Aboutview.vue'),
-
+        path: '/Products',
+        name: 'proudcts',
+        component: () => import('@/views/ProuductsView.vue'),
+      },
+      {
+        path: '/About',
+        name: 'About',
+        component: () => import('@/views/AboutView.vue'),
+      },
+      {
+        path: '/Contact',
+        name: 'contact',
+        component: () => import('@/views/ContactView.vue'),
+      },
+      
+      {
+        path: '/cart',
+        name: 'Cart',
+        component: () => import('@/views/CartView.vue'),
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        name: 'Not Found',
+        component: () => import('@/views/NotFoundView.vue'),
+      },
+      {
+        path: '/singleproduct',
+        name: 'singleproduct',
+        component: () => import('@/views/SingleProduct.vue'),
+      },
+     
+      {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('@/views/profileView.vue'),
+        meta:{
+          gurd:'auth'
+        }
+      },
+       { 
+        path: '/login',
+        name: 'login',
+        component: () => import('@/views/LoginView.vue'),
+        meta:{
+          gurd:'public'
+        }
       },
 
+    ],
+  },
+  {
+    path: '/',
+    component: () => import('@/layouts/Admin/AdminBar.vue'),
+    children: [
+      { 
+        path: '/chartView',
+        name: 'chartView',
+        component: () => import('@/views/chartView.vue'),
+        meta:{
+          gurd:'admin'
+        }
+      },
+      { 
+        path: '/productlist',
+        name: 'productlist',
+        component: () => import('@/views/ProductListView.vue'),
+        meta:{
+          gurd:'admin'
+        }
+      },
+      { 
+        path: '/addProduct',
+        name: 'addProduct',
+        component: () => import('@/views/AddProductsView.vue'),
+        meta:{
+          gurd:'admin'
+        }
+      },
+      { 
+        path: '/UsersList',
+        name: 'UsersList',
+        component: () => import('@/views/UsersListView.vue'),
+        meta:{
+          gurd:'admin'
+        }
+      },
+      { 
+        path: '/EditProduct',
+        name: 'EditProduct',
+        component: () => import('@/views/EditProductlist.vue'),
+        meta:{
+          gurd:'admin'
+        }
+      },
     ],
   },
 ]
@@ -27,6 +116,38 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior (to) {
+    if (to.hash) {
+      return {
+        selector: to.hash ,
+        offset: { x: 0, y: 100 },
+        behavior: 'smooth',
+      }}
+      else
+      {
+        scrollTo({
+          top: 0,
+          left: 0,
+          // behavior: 'smooth'
+        });
+      }
+    
+  }
 })
 
+  
+  router.beforeEach((to, from, next) => {
+    const store=useUserStore()
+    if(to.meta.gurd === 'auth' && !store.isLoggedIn ){
+      next('/login')
+    }
+    // if(to.meta.gurd === 'public' && store.isLoggedIn ){
+    //   next('/profile')
+    // }
+    else
+    {
+      next()
+     
+    }
+  })
 export default router

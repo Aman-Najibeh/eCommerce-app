@@ -1,22 +1,18 @@
 <template>
-  <v-toolbar color="primary" class="fixed-bar">
+  <v-app-bar color="primary" >
     <template v-slot:prepend>
       <!-- <div class="text-h5">Title</div> -->
     </template>
-
-
-
-    <v-toolbar-title><v-icon>mdi-heart</v-icon> SHOP </v-toolbar-title>
-
+    <v-toolbar-title><v-icon>mdi-shopping</v-icon> SHOP </v-toolbar-title>
     <v-spacer></v-spacer>
-
     <v-spacer></v-spacer>
-
     <v-toolbar-items>
       <v-list-item variant="text" exact to="/">Home</v-list-item>
-      <v-list-item variant="text" to="/Products">Products</v-list-item>
+      <v-list-item variant="text" exact to="/About">About</v-list-item>
+      <v-list-item variant="text" exact to="/Contact">Contact</v-list-item>
+      <v-list-item variant="text" exact to="/Products">Products</v-list-item>
       <!-- <v-list-item  variant="text" to="/cart">Cart</v-list-item>    -->
-      <v-btn variant="text" to="/cart"> <v-badge color="red" floating
+      <v-btn variant="text" to="/cart" v-if="isLoggedIn"> <v-badge color="red" floating
           :content="itemscount"><v-icon>mdi-cart</v-icon></v-badge></v-btn>
       <v-btn variant="text" to="/profile" stacked v-if="isLoggedIn">
         <v-img :src="userimage" class="w-50 h-50 rounded-circle ">{{ user.username }}</v-img>
@@ -28,13 +24,13 @@
         LOGOUT
       </v-btn>
      <change-theme-button/>
-     <toggle-language-en-ar/>>
+     <toggle-language-en-ar/>
 
     </v-toolbar-items>
 
 
     <!-- <v-app-bar-nav-icon class="ms-2"></v-app-bar-nav-icon> -->
-  </v-toolbar>
+  </v-app-bar>
 
 </template>
 

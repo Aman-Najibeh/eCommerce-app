@@ -6,12 +6,13 @@
 
 // Components
 import App from './App.vue'
-
+import 'aos/dist/aos.css'
 // Composables
 import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+
 
 const app = createApp(App)
 
