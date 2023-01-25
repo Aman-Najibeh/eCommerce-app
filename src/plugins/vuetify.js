@@ -10,9 +10,10 @@ import 'vuetify/styles'
 
 // Composables
 import { createVuetify } from 'vuetify'
-// import { VDataTable } from 'vuetify/labs/VDataTable'
+import  {VDataTable} from 'vuetify/labs/VDataTable'
+
 export default createVuetify({
-   
+   components: {VDataTable},
   theme: {
     // defaultTheme:'dark', 
     themes: {

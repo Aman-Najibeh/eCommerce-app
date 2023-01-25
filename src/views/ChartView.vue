@@ -2,7 +2,7 @@
      <section class="mb-16 pa-16  bg-blue-grey-lighten-4">
         <div>
             <!-- <h1 class="text-h4 text-center mb-2">Also, you can visit us through the location </h1> -->
-            <p class="text-h5 text-center">Users count: 150 user </p>
+            <p class="text-h5 text-center">Users count: 30 user </p>
             <p class="text-h5 text-center">Products count : {{ ProductsStore.length}} Product</p>
         </div>
     </section>
