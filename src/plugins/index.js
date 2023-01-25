@@ -28,3 +28,4 @@ export function registerPlugins (app) {
     .use(VueApexCharts)
     .use(AOS.init())
 }
+
