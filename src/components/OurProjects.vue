@@ -3,7 +3,7 @@
      data-aos-easing="linear"
      data-aos-duration="1500">
     <div class="team-title pt-6">
-      <h1 class="text-h4 font-weight-bold pb-2">OUR PROJECTS</h1>
+      <h1 class="text-h4 font-weight-bold pb-2 pcolor">OUR PROJECTS</h1>
     </div>
     </section>
     <section class="ma-16 bx-16">

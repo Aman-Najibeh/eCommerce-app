@@ -1,7 +1,7 @@
 <template>
   <v-container class="ma-16">
     <v-row justify="space-around">
-      <v-card width="800" color="primary">
+      <v-card width="800" color="info">
        <v-row justify="center" align="center">
           <v-col>
             <v-img

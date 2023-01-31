@@ -15,17 +15,17 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ '@/views/HomeView.vue'),
       },
       {
-        path: '/Products',
+        path: '/products',
         name: 'proudcts',
         component: () => import('@/views/ProuductsView.vue'),
       },
       {
-        path: '/About',
+        path: '/about',
         name: 'About',
         component: () => import('@/views/AboutView.vue'),
       },
       {
-        path: '/Contact',
+        path: '/contact',
         name: 'contact',
         component: () => import('@/views/ContactView.vue'),
       },
@@ -94,7 +94,7 @@ const routes = [
         }
       },
       { 
-        path: '/UsersList',
+        path: '/usersList',
         name: 'UsersList',
         component: () => import('@/views/UsersListView.vue'),
         meta:{
@@ -102,7 +102,7 @@ const routes = [
         }
       },
       { 
-        path: '/EditProduct',
+        path: '/editProduct',
         name: 'EditProduct',
         component: () => import('@/views/EditProductlist.vue'),
         meta:{

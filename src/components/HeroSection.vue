@@ -1,14 +1,14 @@
 <template>
-  <v-parallax
-    src="@/assets/lucrezia-carnelos-wQ9VuP_Njr4-unsplash (1).jpg"
+  <v-parallax 
+  src="@/assets/cover.jpg"
     height="600"
-  >
-    <div  class=" d-flex flex-column fill-height justify-center align-center text-white">
-      <h1  class="text-h4 font-weight-thin mb-4">
-        SHOP
+    >
+    <div class="w-50 h-100">
+      <h1 class="text-h1 font-weight-black textColor text-center ">
+        Shop
       </h1>
-      <h4 class="subheading">
-        {{ $t('message.Welcome' ) }} to our store ...
+      <h4 class="subheading textColor text-center ma-2 ">
+        {{ $t('message.Welcome') }} to our store ...
       </h4>
     </div>
   </v-parallax>
@@ -21,5 +21,9 @@ export default {
 </script>
 
 <style>
-
+.textColor{
+  color: #FBDF07;
+  margin: auto;
+  margin-top:30%;
+}
 </style>

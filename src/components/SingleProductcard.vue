@@ -1,15 +1,15 @@
 <template>
-    <v-card :loading="loading" class="mx-auto my-12" max-width="1000">
+    <v-card :loading="loading" class=" my-12" >
         <template v-slot:loader="{ isActive }">
             <v-progress-linear :active="isActive" color="deep-purple" height="4" indeterminate></v-progress-linear>
         </template>
 
         <v-carousel>
-            <v-carousel-item :src="thumbnail"></v-carousel-item>
-            <v-carousel-item :src="images[0]"></v-carousel-item>
-            <v-carousel-item :src="images[1]"></v-carousel-item>
-            <v-carousel-item :src="images[2]"></v-carousel-item>
-            <v-carousel-item :src="images[3]"></v-carousel-item>
+            <v-carousel-item  :src="thumbnail" cover></v-carousel-item>
+            <v-carousel-item :src="images[0]" cover></v-carousel-item>
+            <v-carousel-item :src="images[1]" cover></v-carousel-item>
+            <v-carousel-item :src="images[2]" cover></v-carousel-item>
+            <v-carousel-item :src="images[3]" cover></v-carousel-item>
 
         </v-carousel>
 
@@ -27,8 +27,8 @@
 
         <v-card-text>
             <v-row align="center" class="mx-0">
-                <v-rating :model-value="rating" color="amber" density="compact" half-increments readonly
-                    size="small"></v-rating>
+                <!-- <v-rating :model-value="rating" color="amber" density="compact" half-increments readonly
+                    size="small"></v-rating> -->
 
                 <div class="text-grey ms-4">
                     4.5 (413)
@@ -62,7 +62,7 @@
         </div>
 
         <v-card-actions>
-            <v-btn class="cartcolor" @click="AddToCart({id,title,price,description,category,thumbnail,rating,brand,discountPercentage})">
+            <v-btn color="#FBDF07" class="cartcolor" @click="AddToCart({id,title,price,description,category,thumbnail,rating,brand,discountPercentage})">
                 <!-- :disabled="!isLoggedIn" -->
                 <v-icon>mdi-cart-plus</v-icon> Add to cart</v-btn>
         </v-card-actions>
@@ -104,9 +104,8 @@ export default {
 
 <style>
 .cardstyle:hover {
-
-    -webkit-box-shadow: 0px 0px 38px -14px rgba(24, 103, 192, 1);
-    -moz-box-shadow: 0px 0px 38px -14px rgba(24, 103, 192, 1);
-    box-shadow: 0px 0px 38px -14px rgba(24, 103, 192, 1);
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(10,10,9,1);
+-moz-box-shadow: 0px 0px 19px 0px rgba(10,10,9,1);
+box-shadow: 0px 0px 19px 0px rgba(10,10,9,1);
 }
 </style>

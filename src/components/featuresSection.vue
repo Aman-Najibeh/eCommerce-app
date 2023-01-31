@@ -1,10 +1,10 @@
 <template>
   <section class="ma-16 pa-16">
-    <section  >
-          <v-container  data-aos="fade-up">
-              <p>Main Features</p>
-          </v-container>
-      </section>
+      <section  >
+            <v-container  data-aos="fade-up">
+                <p class="pcolor">Main Features</p>
+            </v-container>
+        </section>
       <section class="my-8">
         <v-timeline align="start">
       <v-timeline-item>
@@ -43,9 +43,9 @@ export default {
 </script>
 
 <style>
-p{
+/* .pcolor{
     text-align: center;
     font-size:3rem;
-color:#1867c0;
-}
+color:#FBDF07;
+} */
 </style>

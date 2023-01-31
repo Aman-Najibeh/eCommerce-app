@@ -15,12 +15,12 @@
           
 
             <v-col>
-              <v-btn color="primary" class="mr-4 w-100" to="/">
+              <v-btn color="#FBDF07" class="mr-4 w-100" to="/">
                 USER
               </v-btn>
             </v-col>
             <v-col>
-            <v-btn color="primary" class="mr-4 w-100" to="/chartView">
+            <v-btn color="#FBDF07" class="mr-4 w-100" to="/chartView">
                 ADMIN
               </v-btn>
             </v-col>

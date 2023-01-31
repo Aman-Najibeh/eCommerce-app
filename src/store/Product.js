@@ -104,8 +104,8 @@ export const useProductStore = defineStore('Product', {
     },
     AddProduct(product)
     {
-      this.ProductsStore.push(product),
-      product={}
+      this.ProductsStore.push(product)
+      //product={}
       // console.log(product);
     },
     RemoveProduct(i)
