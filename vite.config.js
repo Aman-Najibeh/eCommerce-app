@@ -9,9 +9,8 @@ import { fileURLToPath, URL } from 'node:url'
 import { VitePWA } from "vite-plugin-pwa"
 // https://vitejs.dev/config/
 export default defineConfig({
-
+  base: '/eCommerce-app/' ,
   plugins: [
-    
     vue({ 
       template: { transformAssetUrls }
     }),
@@ -79,5 +78,9 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  // base: 'eCommerce-app' 
+  // publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",git 
+ 
 })
+// module.exports = {
+//   publicPath: process.env.NODE_ENV === "production" ? "/REPO_NAME/" : "/",
+// };
