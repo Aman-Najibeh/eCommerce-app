@@ -9,7 +9,6 @@ import { VitePWA } from "vite-plugin-pwa"
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/eCommerce-app/' ,
-  // publicPath: process.env.NODE_ENV === "production" ? "/eCommerce-app/" : "/" ,
   plugins: [
     vue({ 
       template: { transformAssetUrls }
