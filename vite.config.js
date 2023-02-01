@@ -9,7 +9,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { VitePWA } from "vite-plugin-pwa"
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/eCommerce-app/' ,
+  // base: '/eCommerce-app/' ,
   // publicPath: process.env.NODE_ENV === "production" ? "/eCommerce-app/" : "/" ,
   plugins: [
     vue({ 
@@ -79,7 +79,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
- 
- 
 })
 
