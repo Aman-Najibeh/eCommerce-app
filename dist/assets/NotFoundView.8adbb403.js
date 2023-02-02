@@ -1,0 +1,1 @@
+import{_ as s,o as e,c as o,a as t,a8 as a}from"./index.6ab43717.js";const c="/assets/undraw_page_not_found_re_e9o6.4a4915c2.svg",n={},_={class:"w-75 h-75 mx-16 mt-4"};function r(p,d,m,i,f,l){return e(),o("section",_,[t(a,{src:c,class:"w-100 mx-16 pl-16"})])}const x=s(n,[["render",r]]);export{x as default};
