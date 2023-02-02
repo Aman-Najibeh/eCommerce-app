@@ -8,7 +8,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { VitePWA } from "vite-plugin-pwa"
 // https://vitejs.dev/config/
 export default defineConfig({
-  // base: '/eCommerce-app/' ,
+  base: '/eCommerce-app/' ,
   plugins: [
     vue({ 
       template: { transformAssetUrls }
