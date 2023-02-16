@@ -21,12 +21,12 @@
           title="Add Product"
           to="/addProduct"
         ></v-list-item>
-        <v-list-item
+        <!-- <v-list-item
           class="btnhover"
           prepend-icon="mdi-circle-edit-outline"
           to="/editProduct"
           title="Edit Product"
-        ></v-list-item>
+        ></v-list-item> -->
         <v-list-item
           class="btnhover"
           prepend-icon="mdi-clipboard-list"
